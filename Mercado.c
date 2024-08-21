@@ -113,30 +113,46 @@ int main()
 {
     int opcao=0; //Definindo Variáveis 
     int x=1;
-
-    for (x=1;x=1;)
-    {
+    char senhadigitada[10]="a";
+    int comparacao;
     
-        system("cls");     
+    
+    
+    printf("### Mercado Bao ###\n\n");
+    printf("Login de administrador!\n\nDigite a sua senha:");
+    scanf("%s", senhadigitada);
+    
+    comparacao = strcmp(senhadigitada, "admin");
+    
+    if(comparacao == 0)
+    {
+    	
+	
+    
+    
+        for (x=1;x=1;)
+       {
+    
+            system("cls");     
         
-	    setlocale(LC_ALL,"Portuguese"); //Definindo a linguagem
+	        setlocale(LC_ALL,"Portuguese"); //Definindo a linguagem
 	
 	
-     	printf("#### Mercadão Bao ####\n\n"); //Inicio do menu
-    	printf("Selecione a opção desejada:\n\n\n");
-	    printf("\t1 Registrar produto\n");
-	    printf("\t2 Consultar produto\n");
-	    printf("\t3 Apagar produto\n\n");
-	    printf("\t4 Sair do Sistema\n\n");
-        printf("Opção: "); //fim do menu
+     	    printf("#### Mercadão Bao ####\n\n"); //Inicio do menu
+    	    printf("Selecione a opção desejada:\n\n\n");
+	        printf("\t1 Registrar produto\n");
+	        printf("\t2 Consultar produto\n");
+	        printf("\t3 Apagar produto\n\n");
+	        printf("\t4 Sair do Sistema\n\n");
+            printf("Opção: "); //fim do menu
 	
 	
-	    scanf("%d", &opcao); // armazenando a escolha do usuário
+	        scanf("%d", &opcao); // armazenando a escolha do usuário
 	
-	    system("cls"); // Limpar a tela
+	        system("cls"); // Limpar a tela
 	
-	    switch(opcao) //Inicio da seleção do menu
-		{ 
+	        switch(opcao) //Inicio da seleção do menu
+		   { 
 	    	case 1:
 	    	    Registrar(); //chamda de funções
 			    break;	
@@ -160,9 +176,11 @@ int main()
 		        system("pause");
 		        break;
 		        // fim da seleção
-		}
-}
-
+		    } 
+	    }
+    }
+    else
+     printf("Senha incorreta");
 }
 
 
